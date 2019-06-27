@@ -8,6 +8,7 @@ import jdk.nashorn.internal.ir.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,6 +21,11 @@ public class EmployeeController {
 	@RequestMapping(value="/addEmployee",method = RequestMethod.POST)
 	public EmployeeDTO addEmployee(@RequestBody EmployeeDTO employeeDTO){
 		return employeeService.saveEmployee(employeeDTO);
+	}
+
+	@PutMapping(value = "/completedTask")
+	public EmployeeDTO isCompleted(@RequestBody EmployeeDTO employeeDTO){
+		return employeeService.isCompleted(employeeDTO);
 	}
 
 }
