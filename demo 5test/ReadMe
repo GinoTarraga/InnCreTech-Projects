@@ -6,3 +6,17 @@
   
    - Add Employee and Task
    - Assign a single task to an employee using employee id and task id
+   
+# Functionalities as of 6/27
+    - Add Employee and Task
+      - {"employeeName": "Lacey"}
+      - {"taskName": "drive"}
+  
+    - Assign a single task to an employee using employee id and task id
+      - {"employeeId": "#", "employeeName": "Lacey", "taskId":"#"}
+      
+     - Completed task
+      - {"employeeId": "4" , "taskId": "4", "isCompleted": 1}
+      
+     - Completed task List 
+      
