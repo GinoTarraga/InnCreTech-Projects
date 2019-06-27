@@ -14,6 +14,8 @@ public class TaskDTO {
 
     private long employeeId;
 
+    private boolean isCompleted;
+
     public long getTaskId(){ return taskId; }
 
     public void setTaskId(long taskId){ this.taskId = taskId; }
@@ -32,5 +34,10 @@ public class TaskDTO {
     public long getEmployeeId() { return employeeId; }
 
     public void setEmployeeId(long employeeId) { this.employeeId = employeeId; }
+
+    //isCompleted getters & Setters
+    public boolean getIsCompleted() { return isCompleted; }
+
+    public void setIsCompleted(boolean isCompleted){ this.isCompleted = isCompleted; }
 
 }
