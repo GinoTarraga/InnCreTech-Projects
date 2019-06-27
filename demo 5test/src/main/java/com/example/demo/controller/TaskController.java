@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/rest/task")
 public class TaskController {
@@ -23,5 +25,10 @@ public class TaskController {
     @PutMapping(value = "/assignTask")
     public TaskDTO assignTask(@RequestBody TaskDTO taskDTO){
         return taskService.assignTask(taskDTO);
+    }
+
+    @GetMapping(value = "completedTaskList")
+    public List <TaskDTO> completedTaskList(TaskDTO taskDTO){
+        return taskService.completedTaskList(taskDTO);
     }
 }
