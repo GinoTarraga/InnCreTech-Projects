@@ -15,6 +15,10 @@ public class EmployeeDTO {
 
 	private String taskName;
 
+	private long taskId;
+
+	private boolean isCompleted;
+
 	public long getEmployeeId() {
 		return employeeId;
 	}
@@ -34,6 +38,15 @@ public class EmployeeDTO {
 	public String getTaskName() { return taskName;}
 
 	public void setTaskName(String taskName) { this.taskName = taskName; }
+
+	public long getTaskId() {return taskId; }
+
+	public void setTaskId(long taskId) {this.taskId = taskId;}
+
+	//isCompleted getters & Setters
+	public boolean getIsCompleted() { return isCompleted; }
+
+	public void setIsCompleted(boolean isCompleted){ this.isCompleted = isCompleted; }
 
 
 }
