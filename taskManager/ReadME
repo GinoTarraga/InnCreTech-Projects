@@ -1,0 +1,40 @@
+# Read me
+
+# Task Manager application lile Asana 
+
+# Functionalities as of 6/26
+  
+   - Add Employee and Task
+   - Assign a single task to an employee using employee id and task id
+   
+# Functionalities as of 6/27
+    - Add Employee and Task
+      - {"employeeName": "Lacey"}
+      - {"taskName": "drive"}
+  
+    - Assign a single task to an employee using employee id and task id
+      - {"employeeId": "#", "employeeName": "Lacey", "taskId":"#"}
+      
+     - Completed task
+      - {"employeeId": "4" , "taskId": "4", "isCompleted": 1}
+      
+     - Completed task List 
+     
+# Functionalities as of 7/3
+
+  - Add Employee and Task
+      - {"employeeFirstName": "Gino", "employeeLastName":"Tarraga"}
+      - {"taskName": "project", "taskDescription": "work"}
+  
+  #bidirectional mapping (uses One to many & Many to one) 
+    - Assign a task to an employee using task Id and emplopyee's Id. 
+      - {"taskId": "9", "employees":[{"employeeId": "25"},{ "employeeId": "14"}] }
+      
+     - Completed task
+      - {"taskId": "13", "isCompleted": 1}
+      
+     - Completed task List
+     
+ # - Test cases using TestNG
+    - Test cases for both EmployeeService and TaskService 
+    - Test cases are organized by group and are dependent on each other. 
