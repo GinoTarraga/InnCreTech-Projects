@@ -69,17 +69,22 @@ public class TaskServiceTest extends EmployeeServiceTest {
         Assert.assertNotNull(taskDTO.getEmployees().contains(employeeDTO));
     }
 
-//    @Test(groups = {"task"}, dependsOnMethods = {"assignTaskTest"})
-//    public void isCompletedTest(){
-//
-//        TaskDTO taskDTOTest = taskDTO;
-//
-//        taskDTOTest.setIsCompleted(true);
-//
-//        taskDTOTest = taskService.isCompleted(taskDTOTest);
-//
-//        Assert.assertEquals(taskDTO.getEmployees().contains(employeeDTO.getTask().getComplete()),
-//                taskDTOTest.getIsCompleted());
-//
-//    }
+    @Test(groups = {"task"}, dependsOnMethods = {"assignTaskTest"})
+    public void isCompletedTest(){
+
+        TaskDTO taskDTOTest = taskDTO;
+
+        taskDTOTest.setIsCompleted(true);
+
+        taskDTOTest = taskService.isCompleted(taskDTOTest);
+
+        EmployeeDTO employeeDTOTemp = new EmployeeDTO();
+        employeeDTOTemp.setEmployeeId(employeeDTO.getEmployeeId());
+        employeeDTOTemp = employeeService.getEmployeeById(employeeDTOTemp);
+
+        Assert.assertEquals(employeeDTOTemp.getTask().getComplete(),
+                taskDTOTest.getIsCompleted());
+
+    }
+    
 }
