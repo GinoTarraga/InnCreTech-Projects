@@ -40,7 +40,8 @@ public class EmployeeManager {
 
         employeeDTO.setEmployeeFirstName(employee.getEmployeeFirstName());
         employeeDTO.setEmployeeLastName(employee.getEmployeeLastName());
-
+        employeeDTO.setTask(employee.getTask());
+       
         return employeeDTO;
     }
 
